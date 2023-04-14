@@ -1,0 +1,23 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-purple-light);
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  box-shadow: 0 4px 0 0  var(--color-blue);
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.btn:hover {
+  background-color: var(--color-purple-lightHover);
+  scale: 1.05;
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}

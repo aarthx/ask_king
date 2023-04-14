@@ -1,0 +1,119 @@
+.quiz {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.quiz * {
+  max-width: 55rem;
+}
+
+.quiz > svg {
+  width: 8rem;
+}
+
+.endBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 4rem;
+  background-color: #dcd98b;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 60%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: inset 5px #000;
+  min-height: 15em;
+}
+
+.timer {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+}
+
+.timer * {
+  grid-area: 1 / 1;
+}
+
+.timer svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+@media (max-width: 1200px) {
+  .timer {
+    top: 0.25rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .quiz {
+    margin: 0;
+  }
+  .quiz > *,
+  .timer {
+    margin: 0 1rem;
+    max-width: 80%;
+  }
+  .timer svg {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .timer {
+    right: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .quiz > *,
+  .timer {
+    margin: 0;
+    max-width: 95%;
+  }
+}
+
+@media (max-height: 670px) {
+  .timer svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-height: 660px) and (max-width: 300px) {
+  .quiz {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 510px) {
+  .endBox a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    text-decoration: none;
+  }
+  .endBox button {
+    width: 8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .endBox {
+    width: 90%;
+  }
+}

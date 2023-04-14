@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;600&family=Grenze+Gotisch&display=swap');
+
+:root {
+  --font-primary: 'Exo', sans-serif;
+  --font-secundary: 'Grenze Gotisch', cursive;
+  --color-purple-light: #d3baf8;
+  --color-purple-lightHover: #ba9aea;
+  --color-purple-dark: #2f0f5d;
+  --color-light1: #f9f7ce;
+  --color-blue: #4dddce;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    var(--color-purple-light),
+    var(--color-purple-dark)
+  );
+  user-select: none;
+}
+
+.container {
+  width: 80rem;
+  height: 100vh;
+  background-color: var(--color-light1);
+  box-shadow: 0 4 4 0 rgba(0, 0, 0, 0.25);
+}
+
+main > svg {
+  cursor: pointer;
+  top: 2rem;
+  left: 2rem;
+  position: absolute;
+  width: 4rem;
+}
+
+@media (max-width: 1350px) {
+  .container {
+    max-width: 80rem;
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .mute,
+  .sound {
+    width: 2rem;
+    top: 1rem;
+    left: initial;
+    right: 1rem;
+  }
+}

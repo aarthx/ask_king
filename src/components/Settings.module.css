@@ -1,0 +1,259 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  user-select: none;
+}
+
+.settings .title {
+  font-size: 2.5rem;
+  padding: 1rem 0 0 0;
+}
+
+.settings .categories {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  max-width: 70%;
+}
+
+.settings .categories::before {
+  position: absolute;
+  top: -0.5rem;
+  content: 'Categories';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  height: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  background-color: var(--color-light1);
+  z-index: 3;
+}
+
+.settings .categories ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.settings .categories li {
+  cursor: pointer;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 8rem;
+  height: 8rem;
+  padding: 1rem;
+  background-color: var(--color-purple-light);
+  transition: 0.2s;
+}
+
+.settings .categories li.active {
+  box-shadow: 0 0 0 5px var(--color-blue);
+  background-color: var(--color-purple-lightHover);
+}
+.settings .categories li.active:hover {
+  background-color: var(--color-purple-light);
+}
+
+.settings .categories li:hover {
+  background-color: var(--color-purple-lightHover);
+}
+
+.settings .categories li p {
+  margin: 0.25rem 0;
+}
+
+.lastRowContainer {
+  width: calc(70% + 3rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+  padding: 1.5rem 0;
+}
+
+.options {
+  position: relative;
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 2rem 1rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+.options::before {
+  position: absolute;
+  top: -0.5rem;
+  content: 'Options';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  background-color: var(--color-light1);
+  z-index: 3;
+  left: 1.5rem;
+}
+
+.options .optionsDif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.options .optionsDif ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.options .optionsDif ul li {
+  cursor: pointer;
+  text-align: center;
+  width: 8rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-purple-light);
+  transition: 0.2s;
+}
+
+.options .optionsDif ul li.active {
+  box-shadow: 0 0 0 3px var(--color-blue);
+  background-color: var(--color-purple-lightHover);
+}
+
+.options .optionsDif ul li.active:hover {
+  background-color: var(--color-purple-light);
+}
+
+.options .optionsDif ul li:hover {
+  background-color: var(--color-purple-lightHover);
+}
+
+.options .optionsQt {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-right: 2rem;
+  gap: 2rem;
+}
+
+.options .optionsQt p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+.options .optionsQt p svg {
+  cursor: pointer;
+}
+
+.options .optionsQt p svg:hover > [class='bg'] {
+  transition: 0.2s;
+  fill: var(--color-purple-lightHover);
+}
+
+@media (max-width: 1298px) {
+  .settings {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .settings {
+    margin: 0;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .options .optionsQt > p {
+    display: flex;
+  }
+  .settings .categories {
+    max-width: 90%;
+  }
+  .lastRowContainer {
+    width: calc(90% + 3rem);
+  }
+}
+
+@media (max-width: 570px) {
+  .settings .categories {
+    max-width: 80%;
+  }
+  .lastRowContainer {
+    width: calc(80% + 1rem);
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .lastRowContainer a {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 450px) {
+  .settings .categories li {
+    width: 5rem;
+    height: 5rem;
+    font-size: 1rem;
+  }
+  .settings .categories li > svg {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .settings .categories {
+    padding: 0.5rem;
+    max-width: 90%;
+  }
+  .settings .categories ul {
+    margin-top: 1rem;
+  }
+  .settings .categories li {
+    width: 5rem;
+    height: 5rem;
+    font-size: 1rem;
+    gap: 0rem;
+  }
+}

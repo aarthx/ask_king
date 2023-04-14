@@ -1,0 +1,25 @@
+.temporizador {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--color-dark-blue);
+  transform: scale(0.8);
+  transition: 0.2s;
+  animation: 1s entrando infinite;
+  user-select: none;
+}
+
+.temporizador span {
+  margin-top: 5px;
+  margin-right: 2px;
+}
+
+@keyframes entrando {
+  to {
+    transform: scale(1);
+  }
+}
