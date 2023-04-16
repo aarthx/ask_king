@@ -35,7 +35,8 @@ const Quiz = () => {
         <section className={styles.endBox}>
           <p>
             You got {correct} question(s) of {data.length} <br />
-            And had a {(correct / data.length) * 100}% success rate.
+            And had a {((correct / data.length) * 100).toFixed(2)}% success
+            rate.
           </p>
           <Link to="/" onClick={() => dispatch(resetGame())}>
             <Button name={'Play again'} />
